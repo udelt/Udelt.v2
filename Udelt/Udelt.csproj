@@ -78,6 +78,7 @@
       <DependentUpon>udelt.css</DependentUpon>
     </Content>
     <Content Include="Pix\FEFEFA.png" />
+    <Content Include="Pix\helper-1.svg" />
     <Content Include="Pix\map.png" />
     <Content Include="Pix\tre-right.svg" />
     <Content Include="Pix\udelt-hva-ramme.svg" />
@@ -85,6 +86,7 @@
     <Content Include="Scripts\jcanvas.min.js" />
     <Content Include="Scripts\jquery.parallax.min.js" />
     <Content Include="Scripts\udelt.js" />
+    <Content Include="Scripts\velocity.min.js" />
     <Content Include="Scripts\wow.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />

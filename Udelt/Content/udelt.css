@@ -1,5 +1,6 @@
 ﻿@font-face {
   font-family: "Courier New";
+    font-size: smaller;
   /*src: url('test.woff') format('woff');*/
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -10,6 +11,7 @@
 body {
   background-color: #fefefa;
   padding-top: 130px;
+  font-size: x-large;
 }
 .disable-hover,
 .disable-hover * {
@@ -40,13 +42,7 @@ body {
   margin-right: 50px;
 }
 .header {
-  font-family: "Courier New";
-  font-size: 150%;
-}
-.tree {
-  opacity: 0.1;
-  position: absolute;
-  left: auto;
+  font-family: "Courier New"; 
 }
 .tree-left {
   z-index: 1000;
@@ -62,7 +58,7 @@ body {
 .what-text-sm {
   position: absolute;
   padding-top: 10px;
-  width: 180px;
+  width: 220px;
   left: 270px;
 }
 .what-header-sm {
@@ -94,16 +90,46 @@ body {
   top: 610px;
   right: 0;
   left: auto;
+  width: 0;
+  z-index: 16;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .tree-right-absolute {
     display: none;
   }
 }
-.topSpline {
-  height: 100px;
+/********************/
+/*  WHO             */
+/********************/
+.spline {
   z-index: 15;
   width: 100%;
   position: relative;
+}
+#topSpline {
+  height: 50px;
   top: 570px;
+  z-index: 15;
+  width: 100%;
+  position: relative;
+}
+#bottomSpline {
+  z-index: 15;
+  width: 100%;
+  position: relative;
+  height: 50px;
+}
+.who-container {
+  height: 500px;
+  z-index: 10;
+  margin-top: 560px;
+}
+#who-content {
+  z-index: 10;
+}
+#who-overlay {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 11;
 }

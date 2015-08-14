@@ -1,57 +1,60 @@
 ﻿@header-font: "Courier New";
 @black: #000;
-@white:#FEFEFA;
+@white: #FEFEFA;
 
-@font-face{ 
-	font-family: @header-font;
-	/*src: url('test.woff') format('woff');*/
+@font-face {
+    font-family: @header-font;
+    /*src: url('test.woff') format('woff');*/
+    font-size:medium;
 }
 
-.hideIE{
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
-      display:none;
+.hideIE {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        display: none;
     }
 }
 
 body {
     background-color: @white;
-    padding-top: 130px;    
+    padding-top: 130px;
+    font-size:x-large;
 }
 
 .disable-hover,
 .disable-hover * {
-  pointer-events: none !important;
+    pointer-events: none !important;
 }
 
-.navbar-udelt{
+.navbar-udelt {
     background-color: @black;
-    color:@white;
-    height:80px;
+    color: @white;
+    height: 80px;
 }
 
 
 .navbar-udelt img {
     height: 50px;
-    float:left;
-    margin-left:5px;
-    margin-top:15px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 15px;
 }
 
-.navbar-links{
-    margin-top:10px;
+.navbar-links {
+    margin-top: 10px;
 }
 
 
 .navbar-udelt a {
-    color:@white;
-    display:block;
-    margin-left:20px;
-    margin-right:5px;
+    color: @white;
+    display: block;
+    margin-left: 20px;
+    margin-right: 5px;
 }
+
 .mini-container {
-    @margin:50px;
-    margin-left:@margin;
-    margin-right:@margin;
+    @margin: 50px;
+    margin-left: @margin;
+    margin-right: @margin;
 }
 
 .header {
@@ -59,63 +62,97 @@ body {
     font-size: 150%;
 }
 
-.tree {
-    opacity:0.1;
-    position:absolute;
-    left:auto;
-}
+
 
 .tree-left {
     z-index: 1000;
-
     .hideIE;
 }
 
 /********************/
 /*  WHAT            */
 /********************/
-@what-base-left-offset:150px;
-@what-base-top-offset:10px;
+@what-base-left-offset: 150px;
+@what-base-top-offset: 10px;
 
 .what-text-sm {
-    position:absolute;
-    padding-top:@what-base-top-offset; 
-    width:180px;
-    left:@what-base-left-offset + 120px;      
+    position: absolute;
+    padding-top: @what-base-top-offset;
+    width: 180px;
+    left: @what-base-left-offset + 120px;
 }
 
 .what-header-sm {
-    position:absolute;
-    left:@what-base-left-offset + 480px;      
+    position: absolute;
+    left: @what-base-left-offset + 480px;
 }
 
 .what-frame {
-    position:absolute;
-    left:@what-base-left-offset;
+    position: absolute;
+    left: @what-base-left-offset;
     top: @what-base-top-offset - 79px;
-    width:400px;
+    width: 400px;
 }
 
 
 /********************/
 /*  TREE-RIGHT      */
 /********************/
+@who-base-zindex: 10;
 
 .tree-right-fixed {
-    position: fixed; top: 80px;  right: 0; left: auto;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    left: auto;
     .hideIE;
 }
 
 .tree-right-absolute {
-   position:absolute; top: 610px;  right: 0; left: auto;
+    position: absolute;
+    top: 610px;
+    right: 0;
+    left: auto;
+    width:0; // Adjusted by js
+    z-index: @who-base-zindex+6;
     .hideIE;
+}
+/********************/
+/*  WHO             */
+/********************/
+@who-top-margin: 560px;
+@who-base-height: 500px;
+.spline {
+    z-index: @who-base-zindex + 5;
+    width: 100%;
+    position: relative;
+}
+
+#topSpline {
+    height: 50px;
+    top: 570px;
+    .spline;
+}
+
+#bottomSpline {
+    .spline;
+    height:50px;
+}
+
+.who-container {
+    height: @who-base-height;
+    z-index: @who-base-zindex;
+    margin-top: @who-top-margin;
+}
+
+#who-content {
+    z-index: @who-base-zindex;
 }
 
 
-.topSpline {
-    height:100px;
-    z-index: 15;
-    width:100%;
-    position:relative;
-    top:570px;
+#who-overlay {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: @who-base-zindex+1;
 }

@@ -11,15 +11,15 @@
     <nav class="navbar navbar-fixed-top navbar-udelt">
         <div class="container-fluid">
             <div class="row header">
-                <span class="wow fadeInUp col-xs-12 col-sm-6" data-wow-duration="1s">
+                <span class=" col-xs-7">
                     <img alt="" src="Pix/udelt-logo-hvit.svg" />
                 </span>
-                <div class="navbar-links">
-                    <div class="text-right hidden-xs col-sm-6">
+                <div class="navbar-links col-xs-5">
+                    <div class="text-right hidden-sm">
                         <a href="tel:+4740402609">+47 4040 2609</a>
                         <a href="mailto:hei@udelt.no">hei@udelt.no</a>
                     </div>
-                    <div class="text-left hidden-sm hidden-md hidden-lg">
+                    <div class="text-right visible-sm small">
                         <a href="tel:+4740402609">+47 4040 2609</a>
                         <a href="mailto:hei@udelt.no">hei@udelt.no</a>
                     </div>
@@ -29,45 +29,54 @@
     </nav>
 
 
-    <div style="position: fixed; top: 55px;" class="hidden-xs tree-left">
+    <div style="position: fixed; top: 55px;" class="hidden-xs hidden-sm tree-left">
         <img src="Pix/tre.svg" style="width: 135px;" />
     </div>
 
-    <div id="what" class="mini-container" style="height: 500px; top: 150px; position: fixed; z-index: 1;">
-        <div class="hidden-xs">
+    <div class="what-overlay-wrapper" style="position: fixed; top: 80px; height: 100px; width: 100%;">
+        <div class="fly-container" style="margin-left: 100px; margin-right: 100px; height: 200px; top: -50px; position: relative;overflow:visible:">
+            <img alt="helper" src="Pix/helper-1.svg" class="move-me" style="width: 30px; position: fixed;z-index:2" />
+        </div>
+    </div>
+
+
+    <div id="what" class="mini-container row" style="height: 500px; top: 150px; position: fixed; z-index: 4;">
+
+        <div class="hidden-xs hidden-sm">
             <div id="what-scene">
                 <!--<li class="layer" data-depth="0.1">-->
                 <img alt="" src="Pix/udelt-hva-ramme.svg" class="what-frame" />
                 <!--</li>-->
             </div>
         </div>
-        <div class="what-text-sm hidden-xs">
-            <p>Mauris id imperdiet lacus. Maecenas id urna scelerisque neque finibus condimentum. Suspendisse faucibus enim a arcu efficitur, eget mattis elit maximus. Sed dolor augue, ultricies eget nunc id, fringilla suscipit leo. Proin tincidunt quam quis lorem euismod volutpat. Suspendisse ac lectus non orci vehicula mollis quis et nisl. Nullam nec metus diam.</p>
+        <div class="what-text-sm hidden-xs hidden-sm col-md-12">
+            <p>En udelt kjærlighet til programmering, design og mennesker.<br /><br /> Vi liker det gjerne vanskelig. </p>
         </div>
-        <div class="hidden-sm hidden-md hidden-lg">
-            <h1>Vi lager apper (og systemer)</h1>
+        <div class="hidden-md hidden-lg">
+            <h1>Vi lager apper <span class="wow fadeIn" data-wow-delay="1.5s"> (og systemer)</span></h1>
         </div>
-        <div class="hidden-sm hidden-md hidden-lg">
-            <p>Mauris id imperdiet lacus. Maecenas id urna scelerisque neque finibus condimentum. Suspendisse faucibus enim a arcu efficitur, eget mattis elit maximus. Sed dolor augue, ultricies eget nunc id, fringilla suscipit leo. Proin tincidunt quam quis lorem euismod volutpat. Suspendisse ac lectus non orci vehicula mollis quis et nisl. Nullam nec metus diam.</p>
+        <div class="hidden-md hidden-lg">
+            <p>Mauris id imperdiet lacus. Maecenas id urna scelerisque neque finibus condimentum. Suspendisse faucibus enim a arcu efficitur.</p>
         </div>
-        <div class="what-header-sm hidden-xs">
+        <div class="what-header-sm hidden-xs hidden-sm">
             <h1>Vi lager apper <span class="wow fadeIn" data-wow-delay="1.5s"><br /> (og systemer)</span></h1>
         </div>
     </div>
 
-    <canvas id="topSpline" class="topSpline"></canvas>
+    <canvas id="topSpline"></canvas>
 
-    <div class="mini-container" id="who" style="height: 500px; z-index: 10; margin-top: 560px;">
+    <div class="mini-container who-container" id="who">
+        <img alt="" id="tree-right-img" class="hidden-xs hidden-sm tree-right-absolute" src="Pix/tre-right.svg" style="width: 0; z-index: 16;" />
 
-        <img alt="" src="Pix/FEFEFA.png" style="width: 2000px; height: 500px; position: absolute; left: 0; z-index: 10" />
-        <img alt="" id="tree-right-img" class="hidden-xs tree-right-absolute" src="Pix/tre-right.svg" style="width: 0; z-index: 11;" />
-
-        <div style="z-index: 15">
+        <div id="who-content">
+            <div class="who-overlay-wrapper" style="position: relative">
+                <img alt="" src="Pix/FEFEFA.png" id="who-overlay" />
+            </div>
             <div>
-                <div>
-                    <img alt="" src="Pix/FEFEFA.png" class="tree" style="height: 1200px; z-index: 15" />
-                </div>
-                <div class="row">
+                <div class="row" style="min-height: 500px;">
+                    <div class="col-xs-offset-1 col-xs-10" style="z-index: 15">
+                        <p><strong>Vivamus justo ex</strong>, suscipit id quam ut, convallis gravida justo. Etiam facilisis in ex ut vestibulum. Maecenas congue lectus consectetur, porttitor sem nec, tristique massa. Vestibulum eros purus, sollicitudin id massa ac, luctus posuere eros. Sed pulvinar tincidunt mauris, sit amet molestie est sollicitudin rhoncus. In augue dolor, elementum ac lacus vitae, pretium luctus risus. Integer non quam dolor. Vestibulum ullamcorper luctus lobortis. Curabitur eget sodales orci, a laoreet urna. Aliquam convallis tempor sapien sed tincidunt. Sed feugiat euismod arcu, ut mattis nunc ornare in. Nam at dapibus neque.</p>
+                    </div>
                     <div class="col-xs-offset-1 col-xs-10" style="z-index: 15">
                         <p>Vivamus justo ex, suscipit id quam ut, convallis gravida justo. Etiam facilisis in ex ut vestibulum. Maecenas congue lectus consectetur, porttitor sem nec, tristique massa. Vestibulum eros purus, sollicitudin id massa ac, luctus posuere eros. Sed pulvinar tincidunt mauris, sit amet molestie est sollicitudin rhoncus. In augue dolor, elementum ac lacus vitae, pretium luctus risus. Integer non quam dolor. Vestibulum ullamcorper luctus lobortis. Curabitur eget sodales orci, a laoreet urna. Aliquam convallis tempor sapien sed tincidunt. Sed feugiat euismod arcu, ut mattis nunc ornare in. Nam at dapibus neque.</p>
                     </div>
@@ -76,13 +85,14 @@
                     </div>
                 </div>
             </div>
+            <canvas id="bottomSpline"></canvas>
         </div>
     </div>
 
-    <div class="mini-container hidden" id="where" style="height: 1500px;  position: fixed; top: 160px; z-index: 5;">
 
+    <div class="mini-container" id="where" style="top: 200px;position: fixed; z-index: 10; display: none;">
         <div class="row">
-            <div id="map" class="col-xs-12 col-sm-6" style="z-index: 15;"><img alt="map" src="Pix/map.png" style="position: relative; left: 100px;height: 400px;" /></div>
+            <div id="map" class="col-xs-12 col-sm-6" style="z-index: 10;"><img alt="map" src="Pix/map.png" style="position: relative; left: 100px;height: 400px;" /></div>
             <div class="col-xs-12 col-sm-6">
                 <ul>
                     <li>Kjøpmannsgata 40</li>
@@ -93,7 +103,10 @@
         </div>
     </div>
 
+    <div id="footer"></div>
+
     <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/velocity.min.js"></script>
     <script src="Scripts/jcanvas.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/wow.min.js"></script>
