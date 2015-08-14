@@ -1,0 +1,121 @@
+﻿@header-font: "Courier New";
+@black: #000;
+@white:#FEFEFA;
+
+@font-face{ 
+	font-family: @header-font;
+	/*src: url('test.woff') format('woff');*/
+}
+
+.hideIE{
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+      display:none;
+    }
+}
+
+body {
+    background-color: @white;
+    padding-top: 130px;    
+}
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+.navbar-udelt{
+    background-color: @black;
+    color:@white;
+    height:80px;
+}
+
+
+.navbar-udelt img {
+    height: 50px;
+    float:left;
+    margin-left:5px;
+    margin-top:15px;
+}
+
+.navbar-links{
+    margin-top:10px;
+}
+
+
+.navbar-udelt a {
+    color:@white;
+    display:block;
+    margin-left:20px;
+    margin-right:5px;
+}
+.mini-container {
+    @margin:50px;
+    margin-left:@margin;
+    margin-right:@margin;
+}
+
+.header {
+    font-family: @header-font;
+    font-size: 150%;
+}
+
+.tree {
+    opacity:0.1;
+    position:absolute;
+    left:auto;
+}
+
+.tree-left {
+    z-index: 1000;
+
+    .hideIE;
+}
+
+/********************/
+/*  WHAT            */
+/********************/
+@what-base-left-offset:150px;
+@what-base-top-offset:10px;
+
+.what-text-sm {
+    position:absolute;
+    padding-top:@what-base-top-offset; 
+    width:180px;
+    left:@what-base-left-offset + 120px;      
+}
+
+.what-header-sm {
+    position:absolute;
+    left:@what-base-left-offset + 480px;      
+}
+
+.what-frame {
+    position:absolute;
+    left:@what-base-left-offset;
+    top: @what-base-top-offset - 79px;
+    width:400px;
+}
+
+
+/********************/
+/*  TREE-RIGHT      */
+/********************/
+
+.tree-right-fixed {
+    position: fixed; top: 80px;  right: 0; left: auto;
+    .hideIE;
+}
+
+.tree-right-absolute {
+   position:absolute; top: 610px;  right: 0; left: auto;
+    .hideIE;
+}
+
+
+.topSpline {
+    height:100px;
+    z-index: 15;
+    width:100%;
+    position:relative;
+    top:570px;
+}
